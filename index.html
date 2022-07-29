@@ -1,31 +1,48 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <title>Bienvenue à bord</title>
 </head>
+
 <body>
     <header>
         <nav>
 
         </nav>
-        <div>
+        <div class="text-white text-center container">
             <h1>Bienvenue à bord</h1>
             <p>Location de voiture 24h/24 et 7j/7</p>
         </div>
-        <div>
+        <div class="container ">
             <form>
-                <select name="address">
-                    <option value="start">Adresse de départ</option>
-                </select>
-                <input type="date" name="startDate">
-                <input type="date" name="endDate">
-                <button type="submit" name="action">Valider ma recherche</button>
+                <div class="p-2">
+                    <div class="mb-2">
+                        <select class="form-select bg-light" name="address">
+                            <option value="start">Adresse de départ</option>
+                        </select>
+                    </div>
+                    <div class="input-group mb-2">
+                        <input class="form-control" type="text" name="startDate" placeholder="Début de location">
+                        <span class="input-group-text" ><i class="bi bi-calendar3"></i></span>
+                    </div>
+                    <div class="input-group mb-2">
+                        <input class="form-control" type="text" name="endDate" placeholder="Fin de location">
+                        <span class="input-group-text" ><i class="bi bi-calendar3"></i></span>
+                    </div>
+                </div>
+                <div class="opacity-75">
+                    <button class="btn btn-success w-100 rounded-0" type="submit" name="action">Valider ma recherche</button>
+                </div>
             </form>
         </div>
     </header>
 </body>
+
 </html>

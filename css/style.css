@@ -1,0 +1,10 @@
+header {
+    background-image: url(../images/background.jpg);
+    height: 500px;
+    background-size: cover;
+}
+
+header form {
+    background-color: rgba(255, 255, 255, .75);
+    margin-top: 90px;
+}
