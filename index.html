@@ -48,35 +48,37 @@
             <h1>Bienvenue à bord</h1>
             <p>Location de voiture 24h/24 et 7j/7</p>
         </div>
-        <div class="container ">
-            <form>
-                <div class="row ">
-                    <div class="ps-4 ps-md-4 pt-1 row col-12 col-lg-9">
-                        <div class="mb-2 col-12 col-md-4 col-lg-4">
-                            <select class="form-select bg-light" name="address">
-                                <option value="start">Adresse de départ</option>
-                            </select>
-                        </div>
-                        <div class="col-12 col-md-4 col-lg-4">
-                            <div class="input-group mb-2 ">
-                                <input class="form-control" type="text" name="startDate"
-                                    placeholder="Début de location">
-                                <span class="input-group-text"><i class="bi bi-calendar3"></i></span>
+        <div class="d-flex align-items-md-end align-items-center" id="formDiv">
+            <div class="container ">
+                <form>
+                    <div class="row">
+                        <div class="ps-4 ps-md-4 pt-1 row col-12 col-lg-9">
+                            <div class="mb-2 col-12 col-md-4 col-lg-4">
+                                <select class="form-select bg-light" name="address">
+                                    <option value="start">Adresse de départ</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-md-4 col-lg-4">
+                                <div class="input-group mb-2 ">
+                                    <input class="form-control" type="text" name="startDate"
+                                        placeholder="Début de location">
+                                    <span class="input-group-text"><i class="bi bi-calendar3"></i></span>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 col-lg-4">
+                                <div class="input-group mb-2">
+                                    <input class="form-control" type="text" name="endDate" placeholder="Fin de location">
+                                    <span class="input-group-text"><i class="bi bi-calendar3"></i></span>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-4 col-lg-4">
-                            <div class="input-group mb-2">
-                                <input class="form-control" type="text" name="endDate" placeholder="Fin de location">
-                                <span class="input-group-text"><i class="bi bi-calendar3"></i></span>
-                            </div>
+                        <div class="opacity-75 col-12 col-lg-3 mt-lg-1">
+                            <button class="btn btn-success w-100 rounded-0" type="submit" name="action">Valider ma
+                                recherche</button>
                         </div>
                     </div>
-                    <div class="opacity-75 col-12 col-lg-3 mt-lg-1">
-                        <button class="btn btn-success w-100 rounded-0" type="submit" name="action">Valider ma
-                            recherche</button>
-                    </div>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </header>
     <main class="container mt-3">
@@ -94,7 +96,7 @@
     </main>
     <footer class="d-flex mt-5 container">
         <div class="col-6 text-end">
-            <img src="./images/agence.jpg" class="image-128 me-4">
+            <img src="./images/agence.jpg" class="image-128 me-4" alt="Agence de Paris">
         </div>
         <div class="col-6 ps-2 ps-md-3 ps-lg-5 small ">
             <p class="mb-0">Notre agence de <strong>Paris</strong></p>

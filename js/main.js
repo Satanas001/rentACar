@@ -90,7 +90,7 @@ function createCar(noCar) {
 
 
     // Class affectation
-    divCar.classList = 'row p-5 border-bottom';
+    divCar.classList = 'row p-5 border-bottom car';
 
     divCarImage.classList = 'col-8 col-lg-5';
     divCarImage.innerHTML = '<img src="images/' + cars[noCar].image + '" class="img-fluid" alt="' + cars[noCar].name + '">';
@@ -107,8 +107,6 @@ function createCar(noCar) {
     divCar.appendChild(divCarImage);
     divCar.appendChild(divCarInfo);
 
-
-
     main.appendChild(divCar);
 }
 
@@ -119,8 +117,10 @@ const addCars = (pageIndex) => {
     const startRange = (pageIndex - 1) * carIncrease;
     const endRange = currentPage == pageCount ? carLimit : pageIndex * carIncrease;
 
-    for (let i = startRange; i < endRange; i++) {
-        createCar(i);
+    if (startRange < carLimit) {
+        for (let i = startRange; i < endRange; i++) {
+            createCar(i);
+        }
     }
 };
 
