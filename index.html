@@ -13,8 +13,36 @@
 
 <body>
     <header>
-        <nav>
-
+        <nav class="navbar ">
+            <div class="w-100 text-end">
+                <button class="navbar-toggler ms-auto me-2 mb-2" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navBarActions" aria-controls="navBarActions"
+                    aria-expanded="false" aria-label="Toggle navigation" data-toggle="button" aria-pressed="false">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse bg-light text-start px-2" id="navBarActions">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Louer une voiture</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Louer un utilitaire</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Réserver un chauffeur</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Découvrez nos agences</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Mon Compte</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
         <div class="text-white text-center container">
             <h1>Bienvenue à bord</h1>
@@ -30,19 +58,21 @@
                     </div>
                     <div class="input-group mb-2">
                         <input class="form-control" type="text" name="startDate" placeholder="Début de location">
-                        <span class="input-group-text" ><i class="bi bi-calendar3"></i></span>
+                        <span class="input-group-text"><i class="bi bi-calendar3"></i></span>
                     </div>
                     <div class="input-group mb-2">
                         <input class="form-control" type="text" name="endDate" placeholder="Fin de location">
-                        <span class="input-group-text" ><i class="bi bi-calendar3"></i></span>
+                        <span class="input-group-text"><i class="bi bi-calendar3"></i></span>
                     </div>
                 </div>
                 <div class="opacity-75">
-                    <button class="btn btn-success w-100 rounded-0" type="submit" name="action">Valider ma recherche</button>
+                    <button class="btn btn-success w-100 rounded-0" type="submit" name="action">Valider ma
+                        recherche</button>
                 </div>
             </form>
         </div>
     </header>
+    <script src="js/bootstrap.js"></script>
 </body>
 
 </html>
