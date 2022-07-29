@@ -16,8 +16,8 @@
         <nav class="navbar ">
             <div class="w-100 text-end">
                 <button class="navbar-toggler ms-auto me-2 mb-2" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navBarActions" aria-controls="navBarActions"
-                    aria-expanded="false" aria-label="Toggle navigation" data-toggle="button" aria-pressed="false">
+                    data-bs-target="#navBarActions" aria-controls="navBarActions" aria-expanded="false"
+                    aria-label="Toggle navigation" data-toggle="button" aria-pressed="false">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse bg-light text-start px-2" id="navBarActions">
@@ -50,24 +50,31 @@
         </div>
         <div class="container ">
             <form>
-                <div class="p-2">
-                    <div class="mb-2">
-                        <select class="form-select bg-light" name="address">
-                            <option value="start">Adresse de départ</option>
-                        </select>
+                <div class="row ">
+                    <div class="ps-4 ps-md-4 pt-1 row col-12 col-lg-9">
+                        <div class="mb-2 col-12 col-md-4 col-lg-4">
+                            <select class="form-select bg-light" name="address">
+                                <option value="start">Adresse de départ</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-md-4 col-lg-4">
+                            <div class="input-group mb-2 ">
+                                <input class="form-control" type="text" name="startDate"
+                                    placeholder="Début de location">
+                                <span class="input-group-text"><i class="bi bi-calendar3"></i></span>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 col-lg-4">
+                            <div class="input-group mb-2">
+                                <input class="form-control" type="text" name="endDate" placeholder="Fin de location">
+                                <span class="input-group-text"><i class="bi bi-calendar3"></i></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="input-group mb-2">
-                        <input class="form-control" type="text" name="startDate" placeholder="Début de location">
-                        <span class="input-group-text"><i class="bi bi-calendar3"></i></span>
+                    <div class="opacity-75 col-12 col-lg-3 mt-lg-1">
+                        <button class="btn btn-success w-100 rounded-0" type="submit" name="action">Valider ma
+                            recherche</button>
                     </div>
-                    <div class="input-group mb-2">
-                        <input class="form-control" type="text" name="endDate" placeholder="Fin de location">
-                        <span class="input-group-text"><i class="bi bi-calendar3"></i></span>
-                    </div>
-                </div>
-                <div class="opacity-75">
-                    <button class="btn btn-success w-100 rounded-0" type="submit" name="action">Valider ma
-                        recherche</button>
                 </div>
             </form>
         </div>
@@ -77,9 +84,9 @@
     </main>
     <footer class="d-flex mt-5 container">
         <div class="col-6 text-end">
-        <img src="./images/agence.jpg" class="image-128 me-4">
+            <img src="./images/agence.jpg" class="image-128 me-4">
         </div>
-        <div class="col-6 ps-2 small ">
+        <div class="col-6 ps-2 ps-md-3 ps-lg-5 small ">
             <p class="mb-0">Notre agence de <strong>Paris</strong></p>
             <p class="mb-0">300 boulevard de Vaugirard, 75015, Paris</p>
             <p class="mb-0">Ouvert 7j/7 de 09h à 13h et de 14h à 20h</p>
