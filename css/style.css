@@ -1,7 +1,8 @@
 header {
     background-image: url(../images/background.jpg);
-    height: 500px;
+    height: 700px;
     background-size: cover;
+    transition: background-image .3s;
 }
 
 header form {
