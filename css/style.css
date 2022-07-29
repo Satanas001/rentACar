@@ -18,10 +18,10 @@ header form {
 }
 
 .car {
-    animation: fadein 2s;
-    -moz-animation: fadein 2s; /* Firefox */
-    -webkit-animation: fadein 2s; /* Safari et Chrome */
-    -o-animation: fadein 2s; /* Opera */
+    animation: fadein 2.5s;
+    -moz-animation: fadein 2.5s; /* Firefox */
+    -webkit-animation: fadein 2.5s; /* Safari et Chrome */
+    -o-animation: fadein 2.5s; /* Opera */
 }
 @keyframes fadein {
     from {

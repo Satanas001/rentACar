@@ -1,55 +1,55 @@
 var cars = [
     {
-        image: 'vehicule1.png',
+        image: ['vehicule1.png', 'peugeot208.png', 'peugeot208.png'],
         name: 'Peugeot 208',
         description: 'Diesel, 5 portes, GPS, Autoradio, Forfait 1000 km (0,5/km supplémentaire)',
         cost: 999,
         location: 'Agence de Paris'
     },
     {
-        image: 'vehicule2.png',
+        image: ['vehicule2.png'],
         name: 'Ford Focus',
         description: 'Diesel, 5 portes, GPS, Autoradio, Forfait 1000 km (0,5/km supplémentaire)',
         cost: 999,
         location: ''
     },
     {
-        image: 'vehicule3.png',
+        image: ['vehicule3.png'],
         name: 'Audi A1',
         description: 'Diesel, 5 portes, GPS, Autoradio, Forfait 1000 km (0,55/km supplémentaire)',
         cost: 1100,
         location: 'Agence de Paris'
     },
     {
-        image: 'vehicule4.png',
+        image: ['vehicule4.png'],
         name: 'Opel Mokka',
         description: 'Diesel, 5 portes, GPS, Autoradio, Forfait 1000 km (0,4/km supplémentaire)',
         cost: 1150,
         location: 'Agence de Paris'
     },
     {
-        image: 'vehicule1.png',
+        image: ['vehicule1.png', 'peugeot208.png'],
         name: 'Peugeot 208',
         description: 'Diesel, 5 portes, GPS, Autoradio, Forfait 1000 km (0,5/km supplémentaire)',
         cost: 999,
         location: 'Agence de Paris'
     },
     {
-        image: 'vehicule2.png',
+        image: ['vehicule2.png'],
         name: 'Ford Focus',
         description: 'Diesel, 5 portes, GPS, Autoradio, Forfait 1000 km (0,5/km supplémentaire)',
         cost: 999,
         location: ''
     },
     {
-        image: 'vehicule3.png',
+        image: ['vehicule3.png'],
         name: 'Audi A1',
         description: 'Diesel, 5 portes, GPS, Autoradio, Forfait 1000 km (0,55/km supplémentaire)',
         cost: 1100,
         location: 'Agence de Paris'
     },
     {
-        image: 'vehicule4.png',
+        image: ['vehicule4.png'],
         name: 'Opel Mokka',
         description: 'Diesel, 5 portes, GPS, Autoradio, Forfait 1000 km (0,4/km supplémentaire)',
         cost: 1150,
@@ -77,6 +77,9 @@ function changeBackground() {
 }
 
 function createCar(noCar) {
+    let indexImage = 0 ;
+    let indexNext = (indexImage+1) % cars[noCar].image.length ;
+    let indexPrevious = cars[noCar].image.length - 1 ;
     let divCar = document.createElement('div');
 
     // div with Car image
@@ -88,12 +91,11 @@ function createCar(noCar) {
     // Button to rent the Car
     let rentButton = document.createElement('button');
 
-
     // Class affectation
     divCar.classList = 'row p-5 border-bottom car';
 
-    divCarImage.classList = 'col-8 col-lg-5';
-    divCarImage.innerHTML = '<img src="images/' + cars[noCar].image + '" class="img-fluid" alt="' + cars[noCar].name + '">';
+    divCarImage.classList = 'col-8 col-lg-5 d-flex align-items-center';
+    divCarImage.innerHTML = '<button class="btn btn-previous" data-previous="' + indexPrevious + '"><i class="bi bi-caret-left-fill"></i></button><img src="images/' + cars[noCar].image[indexImage] + '" class="img-fluid" alt="' + cars[noCar].name + '"><button class="btn btn-next" data-noCar = "'+ noCar + '" data-next="'+ indexNext  + '"><i class="bi bi-caret-right-fill"></i></btn>';
 
     divCarInfo.classList = 'lh-lg col-4 col-lg-7';
     divCarInfo.innerHTML = '<div class="fs-4 d-none d-lg-block">' + cars[noCar].name + '</div>' + '<div class="d-none d-lg-block">' + cars[noCar].description + '</div>';
@@ -108,6 +110,7 @@ function createCar(noCar) {
     divCar.appendChild(divCarInfo);
 
     main.appendChild(divCar);
+
 }
 
 // function to Add Cars on the page
@@ -142,5 +145,10 @@ const handleInfiniteScroll = () => {
         addCars(currentPage + 1);
     }
 };
+const changeCarImage = (event) => {
+    console.log(event)
+}
 
 window.addEventListener("scroll", handleInfiniteScroll);
+
+
